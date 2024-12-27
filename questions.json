@@ -1,0 +1,87 @@
+[
+    {
+        "id": 3,
+        "text": "Who discovered gravity by observing a falling apple?",
+        "options": ["Albert Einstein", "Galileo Galilei", "Isaac Newton", "Marie Curie"],
+        "correctIndex": 2,
+        "topic": "Science",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 4,
+        "text": "What is the tallest mountain in the world?",
+        "options": ["Mount Kilimanjaro", "Mount Everest", "K2", "Denali"],
+        "correctIndex": 1,
+        "topic": "Geography",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 5,
+        "text": "Which country won the FIFA World Cup in 2018?",
+        "options": ["Germany", "Brazil", "France", "Argentina"],
+        "correctIndex": 2,
+        "topic": "Sports",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 6,
+        "text": "What does HTTP stand for?",
+        "options": [
+            "HyperText Transfer Protocol",
+            "High Transfer Text Protocol",
+            "Hyper Transfer Terminal Protocol",
+            "HyperText Transmission Protocol"
+        ],
+        "correctIndex": 0,
+        "topic": "Technology",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 7,
+        "text": "What is the square root of 64?",
+        "options": ["6", "7", "8", "9"],
+        "correctIndex": 2,
+        "topic": "Mathematics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 8,
+        "text": "Who painted 'Starry Night'?",
+        "options": ["Pablo Picasso", "Leonardo da Vinci", "Vincent van Gogh", "Claude Monet"],
+        "correctIndex": 2,
+        "topic": "Art",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 9,
+        "text": "Which element has the chemical symbol 'O'?",
+        "options": ["Oxygen", "Gold", "Osmium", "Oxide"],
+        "correctIndex": 0,
+        "topic": "Science",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 10,
+        "text": "What year did the Titanic sink?",
+        "options": ["1905", "1912", "1920", "1930"],
+        "correctIndex": 1,
+        "topic": "History",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 11,
+        "text": "Which ancient civilization built the pyramids?",
+        "options": ["Romans", "Greeks", "Egyptians", "Aztecs"],
+        "correctIndex": 2,
+        "topic": "History",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 12,
+        "text": "What is the largest planet in our solar system?",
+        "options": ["Earth", "Saturn", "Jupiter", "Mars"],
+        "correctIndex": 2,
+        "topic": "Science",
+        "difficulty": "Easy"
+    }
+]
