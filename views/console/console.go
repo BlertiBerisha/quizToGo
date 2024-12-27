@@ -7,6 +7,7 @@ import (
 	"os"
 	"os/exec"
 	"quizToGo/models"
+	"sort"
 	"strings"
 )
 
@@ -27,8 +28,19 @@ func ShowMenu() {
 	`)
 }
 
-// ShowQuizSetup shows the quiz setup information
-func ShowQuizSetup() {
+// ShowAvailableTopics displays the available topics
+func ShowAvailableTopics() {
+	fmt.Println("Available topics: Physics, History, Mathematics")
+	fmt.Println("Type the topic you want to play with or type 'Random'")
+}
+
+// ShowAvailableDifficulties displays the available difficulty levels
+func ShowAvailableDifficulties() {
+	fmt.Println("Available difficulties: Easy, Medium, Hard")
+}
+
+// ShowHowManyQuestions asks the user how many questions they would like to answer
+func ShowHowManyQuestions() {
 	fmt.Println("How many questions would you like to answer?")
 }
 
@@ -58,17 +70,27 @@ func ShowFinalScore(score, total int) {
 	fmt.Printf("Percentage: %.1f%%\n", percentage)
 }
 
-// ShowHighScores displays all high scores
+// ShowHighScores displays all high scores sorted by success rate
 func ShowHighScores(scores []models.Score) {
+	// Sort scores by success rate (descending)
+	sort.Slice(scores, func(i, j int) bool {
+		// Calculate success rate for both scores
+		rateI := float64(scores[i].Score) / float64(scores[i].TotalQuestions)
+		rateJ := float64(scores[j].Score) / float64(scores[j].TotalQuestions)
+		return rateI > rateJ // Sort in descending order
+	})
+
+	// Display sorted high scores
 	fmt.Println("\nHIGH SCORES:")
 	fmt.Println("-------------------")
 	for i, score := range scores {
+		rate := float64(score.Score) / float64(score.TotalQuestions) * 100
 		fmt.Printf("%d. %s: %d/%d (%.1f%%)\n",
 			i+1,
 			score.PlayerName,
 			score.Score,
 			score.TotalQuestions,
-			float64(score.Score)/float64(score.TotalQuestions)*100,
+			rate,
 		)
 	}
 }

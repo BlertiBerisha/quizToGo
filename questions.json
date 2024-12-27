@@ -1,87 +1,723 @@
 [
     {
-        "id": 3,
+        "id": 1,
         "text": "Who discovered gravity by observing a falling apple?",
         "options": ["Albert Einstein", "Galileo Galilei", "Isaac Newton", "Marie Curie"],
         "correctIndex": 2,
-        "topic": "Science",
+        "topic": "Physics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 2,
+        "text": "What is the speed of light?",
+        "options": ["300,000 km/s", "500,000 km/s", "600,000 km/s", "200,000 km/s"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 3,
+        "text": "What is the unit of force?",
+        "options": ["Newton", "Joule", "Pascal", "Watt"],
+        "correctIndex": 0,
+        "topic": "Physics",
         "difficulty": "Easy"
     },
     {
         "id": 4,
-        "text": "What is the tallest mountain in the world?",
-        "options": ["Mount Kilimanjaro", "Mount Everest", "K2", "Denali"],
+        "text": "What is the formula for kinetic energy?",
+        "options": ["KE = mv^2", "KE = 1/2 mv^2", "KE = m/v", "KE = mv"],
         "correctIndex": 1,
-        "topic": "Geography",
-        "difficulty": "Medium"
+        "topic": "Physics",
+        "difficulty": "Easy"
     },
     {
         "id": 5,
-        "text": "Which country won the FIFA World Cup in 2018?",
-        "options": ["Germany", "Brazil", "France", "Argentina"],
-        "correctIndex": 2,
-        "topic": "Sports",
-        "difficulty": "Medium"
+        "text": "What is the gravitational constant?",
+        "options": ["9.8 m/s²", "6.67 × 10⁻¹¹ N·m²/kg²", "3.14", "10"],
+        "correctIndex": 1,
+        "topic": "Physics",
+        "difficulty": "Easy"
     },
     {
         "id": 6,
-        "text": "What does HTTP stand for?",
-        "options": [
-            "HyperText Transfer Protocol",
-            "High Transfer Text Protocol",
-            "Hyper Transfer Terminal Protocol",
-            "HyperText Transmission Protocol"
-        ],
-        "correctIndex": 0,
-        "topic": "Technology",
-        "difficulty": "Medium"
+        "text": "Who developed the theory of relativity?",
+        "options": ["Isaac Newton", "Nikola Tesla", "Albert Einstein", "Galileo Galilei"],
+        "correctIndex": 2,
+        "topic": "Physics",
+        "difficulty": "Easy"
     },
     {
         "id": 7,
-        "text": "What is the square root of 64?",
+        "text": "What is the atomic number of hydrogen?",
+        "options": ["1", "2", "3", "4"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 8,
+        "text": "What is the SI unit of electric current?",
+        "options": ["Ampere", "Volt", "Ohm", "Watt"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 9,
+        "text": "Who invented the light bulb?",
+        "options": ["Nikola Tesla", "Albert Einstein", "Thomas Edison", "Alexander Graham Bell"],
+        "correctIndex": 2,
+        "topic": "Physics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 10,
+        "text": "What is the charge of an electron?",
+        "options": ["Positive", "Negative", "Neutral", "None"],
+        "correctIndex": 1,
+        "topic": "Physics",
+        "difficulty": "Easy"
+    },
+
+    {
+        "id": 11,
+        "text": "What is the law of conservation of energy?",
+        "options": ["Energy cannot be created or destroyed", "Energy can be created but not destroyed", "Energy can be destroyed", "None of the above"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 12,
+        "text": "What does E=mc² represent?",
+        "options": ["Energy = mass × speed of light", "Energy = mass × speed", "Energy = mass × velocity", "Energy = mass × acceleration"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 13,
+        "text": "What is the half-life of a radioactive element?",
+        "options": ["The time it takes for half of a sample to decay", "The time it takes for the element to become stable", "The time it takes for an element to double in mass", "None of the above"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 14,
+        "text": "What is the term for the bending of light around an object?",
+        "options": ["Refraction", "Reflection", "Diffraction", "Gravitational lensing"],
+        "correctIndex": 3,
+        "topic": "Physics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 15,
+        "text": "What does the Doppler Effect explain?",
+        "options": ["The change in frequency of a wave as the source moves", "The change in the speed of light", "The bending of waves around objects", "The reflection of sound waves"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 16,
+        "text": "What is the difference between mass and weight?",
+        "options": ["Mass is constant; weight varies with gravity", "Weight is constant; mass varies", "Mass and weight are the same", "None of the above"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 17,
+        "text": "What is the first law of thermodynamics?",
+        "options": ["Energy cannot be created or destroyed", "Energy can be transformed", "Energy is always conserved", "All of the above"],
+        "correctIndex": 3,
+        "topic": "Physics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 18,
+        "text": "Which element has the most protons?",
+        "options": ["Oxygen", "Carbon", "Hydrogen", "Uranium"],
+        "correctIndex": 3,
+        "topic": "Physics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 19,
+        "text": "What is the unit of electric resistance?",
+        "options": ["Ohm", "Ampere", "Volt", "Watt"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 20,
+        "text": "What is an example of a non-renewable energy source?",
+        "options": ["Solar", "Wind", "Coal", "Geothermal"],
+        "correctIndex": 2,
+        "topic": "Physics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 21,
+        "text": "What is the Heisenberg Uncertainty Principle?",
+        "options": ["It is impossible to measure both position and momentum of a particle simultaneously", "It relates to energy and matter", "It is a law of thermodynamics", "It is a quantum law of gravity"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 22,
+        "text": "What is the significance of the Higgs boson?",
+        "options": ["It is a fundamental particle that gives other particles mass", "It is a particle related to gravity", "It explains the speed of light", "None of the above"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 23,
+        "text": "What is quantum entanglement?",
+        "options": ["When two particles become linked, and the state of one affects the state of the other", "The state of matter in a supercooled environment", "When two objects collide", "None of the above"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 24,
+        "text": "What is the theory of quantum chromodynamics (QCD)?",
+        "options": ["It describes the strong force between quarks", "It explains how gravity works", "It describes wave-particle duality", "None of the above"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 25,
+        "text": "What is dark matter?",
+        "options": ["It is an invisible substance that makes up most of the universe's mass", "It is a form of anti-matter", "It is a type of gas", "None of the above"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 26,
+        "text": "What is the Planck length?",
+        "options": ["The smallest meaningful length in quantum mechanics", "The length of an atom", "The maximum length allowed by general relativity", "The distance between the Earth and the Sun"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 27,
+        "text": "What is the difference between a black hole and a wormhole?",
+        "options": ["A black hole is a region with infinite density; a wormhole is a tunnel in space-time", "A black hole is a passage to another universe; a wormhole is a black hole", "A black hole is invisible; a wormhole is visible", "A wormhole can be used for time travel, but a black hole cannot"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 28,
+        "text": "What is string theory?",
+        "options": ["It suggests that particles are 1-dimensional strings rather than 0-dimensional points", "It suggests that matter is made of smaller particles", "It suggests that everything is made of light", "It suggests that gravity can be controlled using strings"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 29,
+        "text": "What is the multiverse theory?",
+        "options": ["The theory that multiple universes exist simultaneously", "The theory that there is only one universe", "The theory that time travel is possible", "The theory that all of space is infinite"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 30,
+        "text": "What is the concept of spacetime curvature?",
+        "options": ["It describes the warping of space and time around massive objects", "It is the bending of light due to gravity", "It refers to the speed at which time passes", "It is the expansion of the universe"],
+        "correctIndex": 0,
+        "topic": "Physics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 31,
+        "text": "Who was the first President of the United States?",
+        "options": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "John Adams"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 32,
+        "text": "Which ancient civilization built the Great Pyramids of Giza?",
+        "options": ["Romans", "Greeks", "Egyptians", "Mayans"],
+        "correctIndex": 2,
+        "topic": "History",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 33,
+        "text": "In which year did World War I begin?",
+        "options": ["1910", "1912", "1914", "1916"],
+        "correctIndex": 2,
+        "topic": "History",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 34,
+        "text": "Who was the first man to walk on the moon?",
+        "options": ["Yuri Gagarin", "Neil Armstrong", "Buzz Aldrin", "Michael Collins"],
+        "correctIndex": 1,
+        "topic": "History",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 35,
+        "text": "What was the main goal of the Magna Carta?",
+        "options": ["To limit the powers of the monarchy", "To establish the British monarchy", "To build the Tower of London", "To form the first British Parliament"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 36,
+        "text": "In which year did the Titanic sink?",
+        "options": ["1905", "1912", "1920", "1930"],
+        "correctIndex": 1,
+        "topic": "History",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 37,
+        "text": "Who was the first emperor of China?",
+        "options": ["Qin Shi Huang", "Genghis Khan", "Kublai Khan", "Emperor Hirohito"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 38,
+        "text": "Who was the leader of the Soviet Union during World War II?",
+        "options": ["Joseph Stalin", "Vladimir Lenin", "Leon Trotsky", "Mikhail Gorbachev"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 39,
+        "text": "Which country was the first to grant women the right to vote?",
+        "options": ["United States", "New Zealand", "Australia", "Finland"],
+        "correctIndex": 1,
+        "topic": "History",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 40,
+        "text": "Which civilization created the first known writing system?",
+        "options": ["Sumerians", "Romans", "Greeks", "Egyptians"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 41,
+        "text": "What year did the American Civil War end?",
+        "options": ["1865", "1870", "1850", "1880"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 42,
+        "text": "Which empire was ruled by Julius Caesar?",
+        "options": ["Roman Empire", "Ottoman Empire", "Mongol Empire", "Byzantine Empire"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 43,
+        "text": "Who was the first female monarch of England?",
+        "options": ["Queen Victoria", "Queen Elizabeth I", "Queen Elizabeth II", "Mary I"],
+        "correctIndex": 1,
+        "topic": "History",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 44,
+        "text": "What year did the Berlin Wall fall?",
+        "options": ["1985", "1990", "1989", "1991"],
+        "correctIndex": 2,
+        "topic": "History",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 45,
+        "text": "Who was the first explorer to sail around the world?",
+        "options": ["Christopher Columbus", "Marco Polo", "Ferdinand Magellan", "James Cook"],
+        "correctIndex": 2,
+        "topic": "History",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 46,
+        "text": "Which country was the first to land a human on the Moon?",
+        "options": ["United States", "Soviet Union", "China", "India"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 47,
+        "text": "Which war was fought between the North and South regions of the United States?",
+        "options": ["Revolutionary War", "War of 1812", "Civil War", "World War I"],
+        "correctIndex": 2,
+        "topic": "History",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 48,
+        "text": "In what year did World War II end?",
+        "options": ["1943", "1945", "1947", "1950"],
+        "correctIndex": 1,
+        "topic": "History",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 49,
+        "text": "Which famous leader was known as the 'Iron Lady'?",
+        "options": ["Margaret Thatcher", "Indira Gandhi", "Golda Meir", "Angela Merkel"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 50,
+        "text": "What was the cause of the French Revolution?",
+        "options": ["Economic hardship", "Political instability", "Influence of the Enlightenment", "All of the above"],
+        "correctIndex": 3,
+        "topic": "History",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 51,
+        "text": "Who was the ruler of the Mongol Empire at its peak?",
+        "options": ["Kublai Khan", "Genghis Khan", "Tamerlane", "Attila the Hun"],
+        "correctIndex": 1,
+        "topic": "History",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 52,
+        "text": "Which ancient civilization developed the first known legal code?",
+        "options": ["Sumerians", "Babylonians", "Egyptians", "Romans"],
+        "correctIndex": 1,
+        "topic": "History",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 53,
+        "text": "In which battle did Napoleon Bonaparte suffer his final defeat?",
+        "options": ["Battle of Waterloo", "Battle of Leipzig", "Battle of Trafalgar", "Battle of Austerlitz"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 54,
+        "text": "What was the primary cause of the fall of the Roman Empire?",
+        "options": ["Economic decline", "Military defeats", "Political corruption", "All of the above"],
+        "correctIndex": 3,
+        "topic": "History",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 55,
+        "text": "Who was the last czar of Russia?",
+        "options": ["Peter the Great", "Nicholas II", "Ivan the Terrible", "Catherine the Great"],
+        "correctIndex": 1,
+        "topic": "History",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 56,
+        "text": "Who was the leader of the Soviet Union during the Cuban Missile Crisis?",
+        "options": ["Leonid Brezhnev", "Joseph Stalin", "Mikhail Gorbachev", "Nikita Khrushchev"],
+        "correctIndex": 3,
+        "topic": "History",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 57,
+        "text": "Which treaty ended World War I?",
+        "options": ["Treaty of Versailles", "Treaty of Paris", "Treaty of Ghent", "Treaty of Rome"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 58,
+        "text": "Who was the leader of the Nationalist forces during the Spanish Civil War?",
+        "options": ["Francisco Franco", "Josef Stalin", "Adolf Hitler", "Benito Mussolini"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 59,
+        "text": "Which empire was the first to build a large-scale road network?",
+        "options": ["Roman Empire", "Persian Empire", "Inca Empire", "Ottoman Empire"],
+        "correctIndex": 1,
+        "topic": "History",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 60,
+        "text": "What event marked the beginning of the Russian Revolution of 1917?",
+        "options": ["The February Revolution", "The Bolshevik Revolution", "The October Revolution", "The assassination of Tsar Nicholas II"],
+        "correctIndex": 0,
+        "topic": "History",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 61,
+        "text": "What is the sum of 3 and 5?",
         "options": ["6", "7", "8", "9"],
         "correctIndex": 2,
         "topic": "Mathematics",
         "difficulty": "Easy"
     },
     {
-        "id": 8,
-        "text": "Who painted 'Starry Night'?",
-        "options": ["Pablo Picasso", "Leonardo da Vinci", "Vincent van Gogh", "Claude Monet"],
+        "id": 62,
+        "text": "What is 10 minus 4?",
+        "options": ["5", "6", "7", "8"],
+        "correctIndex": 1,
+        "topic": "Mathematics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 63,
+        "text": "What is 12 divided by 3?",
+        "options": ["3", "4", "5", "6"],
+        "correctIndex": 1,
+        "topic": "Mathematics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 64,
+        "text": "What is the square root of 81?",
+        "options": ["7", "8", "9", "10"],
         "correctIndex": 2,
-        "topic": "Art",
+        "topic": "Mathematics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 65,
+        "text": "What is 15 plus 9?",
+        "options": ["22", "23", "24", "25"],
+        "correctIndex": 0,
+        "topic": "Mathematics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 66,
+        "text": "What is 6 times 7?",
+        "options": ["40", "42", "44", "46"],
+        "correctIndex": 1,
+        "topic": "Mathematics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 67,
+        "text": "What is 18 divided by 2?",
+        "options": ["8", "9", "10", "11"],
+        "correctIndex": 1,
+        "topic": "Mathematics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 68,
+        "text": "What is 20 minus 7?",
+        "options": ["12", "13", "14", "15"],
+        "correctIndex": 1,
+        "topic": "Mathematics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 69,
+        "text": "What is 2 raised to the power of 3?",
+        "options": ["6", "7", "8", "9"],
+        "correctIndex": 2,
+        "topic": "Mathematics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 70,
+        "text": "What is the perimeter of a rectangle with length 4 and width 3?",
+        "options": ["12", "14", "16", "18"],
+        "correctIndex": 0,
+        "topic": "Mathematics",
+        "difficulty": "Easy"
+    },
+    {
+        "id": 71,
+        "text": "What is the value of π (Pi) to two decimal places?",
+        "options": ["3.12", "3.13", "3.14", "3.15"],
+        "correctIndex": 2,
+        "topic": "Mathematics",
         "difficulty": "Medium"
     },
     {
-        "id": 9,
-        "text": "Which element has the chemical symbol 'O'?",
-        "options": ["Oxygen", "Gold", "Osmium", "Oxide"],
+        "id": 72,
+        "text": "What is the area of a triangle with base 5 and height 6?",
+        "options": ["15", "16", "17", "18"],
         "correctIndex": 0,
-        "topic": "Science",
-        "difficulty": "Easy"
+        "topic": "Mathematics",
+        "difficulty": "Medium"
     },
     {
-        "id": 10,
-        "text": "What year did the Titanic sink?",
-        "options": ["1905", "1912", "1920", "1930"],
+        "id": 73,
+        "text": "What is the square root of 144?",
+        "options": ["10", "11", "12", "13"],
+        "correctIndex": 2,
+        "topic": "Mathematics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 74,
+        "text": "What is the sum of the angles in a triangle?",
+        "options": ["180°", "190°", "200°", "210°"],
+        "correctIndex": 0,
+        "topic": "Mathematics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 75,
+        "text": "What is the value of 9 squared?",
+        "options": ["81", "90", "100", "110"],
+        "correctIndex": 0,
+        "topic": "Mathematics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 76,
+        "text": "What is the solution to the equation: 2x + 4 = 10?",
+        "options": ["2", "3", "4", "5"],
         "correctIndex": 1,
-        "topic": "History",
+        "topic": "Mathematics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 77,
+        "text": "If a = 3 and b = 4, what is the value of a^2 + b^2?",
+        "options": ["9", "16", "25", "36"],
+        "correctIndex": 2,
+        "topic": "Mathematics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 78,
+        "text": "What is 5 factorial (5!)?",
+        "options": ["120", "130", "140", "150"],
+        "correctIndex": 0,
+        "topic": "Mathematics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 79,
+        "text": "What is the hypotenuse of a right triangle with sides 3 and 4?",
+        "options": ["5", "6", "7", "8"],
+        "correctIndex": 0,
+        "topic": "Mathematics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 80,
+        "text": "What is the volume of a cube with side length 3?",
+        "options": ["9", "18", "27", "36"],
+        "correctIndex": 2,
+        "topic": "Mathematics",
+        "difficulty": "Medium"
+    },
+    {
+        "id": 81,
+        "text": "What is the derivative of f(x) = x^2?",
+        "options": ["x", "2x", "x^2", "2x^2"],
+        "correctIndex": 1,
+        "topic": "Mathematics",
         "difficulty": "Hard"
     },
     {
-        "id": 11,
-        "text": "Which ancient civilization built the pyramids?",
-        "options": ["Romans", "Greeks", "Egyptians", "Aztecs"],
-        "correctIndex": 2,
-        "topic": "History",
-        "difficulty": "Easy"
+        "id": 82,
+        "text": "What is the integral of f(x) = 1/x?",
+        "options": ["ln(x)", "x", "x^2", "1/x"],
+        "correctIndex": 0,
+        "topic": "Mathematics",
+        "difficulty": "Hard"
     },
     {
-        "id": 12,
-        "text": "What is the largest planet in our solar system?",
-        "options": ["Earth", "Saturn", "Jupiter", "Mars"],
-        "correctIndex": 2,
-        "topic": "Science",
-        "difficulty": "Easy"
+        "id": 83,
+        "text": "What is the value of the limit lim(x→0) (sin(x)/x)?",
+        "options": ["0", "1", "2", "∞"],
+        "correctIndex": 1,
+        "topic": "Mathematics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 84,
+        "text": "What is the solution to the equation 2x^2 - 3x - 5 = 0?",
+        "options": ["x = 1", "x = -1", "x = 2", "x = -2"],
+        "correctIndex": 1,
+        "topic": "Mathematics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 85,
+        "text": "What is the determinant of the matrix [[1, 2], [3, 4]]?",
+        "options": ["-2", "2", "4", "0"],
+        "correctIndex": 0,
+        "topic": "Mathematics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 86,
+        "text": "What is the value of e (Euler's number) to two decimal places?",
+        "options": ["2.71", "2.72", "2.73", "2.74"],
+        "correctIndex": 0,
+        "topic": "Mathematics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 87,
+        "text": "What is the volume of a sphere with radius 4?",
+        "options": ["268.08", "301.59", "400.00", "450.00"],
+        "correctIndex": 1,
+        "topic": "Mathematics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 88,
+        "text": "What is the binomial expansion of (x + 2)^3?",
+        "options": ["x^3 + 6x^2 + 12x + 8", "x^3 + 6x^2 + 12x - 8", "x^3 + 6x^2 - 12x + 8", "x^3 + 4x^2 + 12x + 8"],
+        "correctIndex": 0,
+        "topic": "Mathematics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 89,
+        "text": "What is the sum of the first 100 prime numbers?",
+        "options": ["1060", "1063", "1155", "1250"],
+        "correctIndex": 1,
+        "topic": "Mathematics",
+        "difficulty": "Hard"
+    },
+    {
+        "id": 90,
+        "text": "What is the value of the series ∑(n=1 to ∞) 1/n^2?",
+        "options": ["π^2/6", "π^2/4", "π^2/2", "π^2"],
+        "correctIndex": 0,
+        "topic": "Mathematics",
+        "difficulty": "Hard"
     }
 ]

@@ -2,15 +2,18 @@ package models
 
 import (
 	"encoding/json"
+	"math/rand"
 	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 
 // Command constants
 const (
 	CommandStart     = "1"
 	CommandHighscore = "2"
+	CommandTimer     = "3"
 	CommandClear     = "c"
 	CommandQuit      = "q"
 )
@@ -66,15 +69,52 @@ func loadQuestionsFromFile() ([]Question, error) {
 	return loadedQuestions, nil
 }
 
-// GetQuestions returns a slice of questions based on count
-func GetQuestions(count int) []Question {
+// GetRandomQuestionsByDifficulty returns random questions filtered by difficulty
+func GetRandomQuestionsByDifficulty(difficulty string, questionCount int) []Question {
+	// Filter questions by difficulty
+	var filteredQuestions []Question
+	for _, question := range questions {
+		if question.Difficulty == difficulty {
+			filteredQuestions = append(filteredQuestions, question)
+		}
+	}
+
+	// Seed the random number generator
+	rand.Seed(time.Now().UnixNano())
+
+	// If there are not enough questions of the selected difficulty, return as many as possible
+	if len(filteredQuestions) < questionCount {
+		questionCount = len(filteredQuestions)
+	}
+
+	// Randomly shuffle the questions
+	rand.Shuffle(len(filteredQuestions), func(i, j int) {
+		filteredQuestions[i], filteredQuestions[j] = filteredQuestions[j], filteredQuestions[i]
+	})
+
+	// Return the selected number of random questions
+	return filteredQuestions[:questionCount]
+}
+
+// GetQuestionsByTopicAndDifficulty returns questions filtered by topic and difficulty
+func GetQuestionsByTopicAndDifficulty(topic, difficulty string, count int) []Question {
+	var filteredQuestions []Question
+
+	// Filter questions by topic and difficulty
+	for _, question := range questions {
+		if strings.ToLower(question.Topic) == strings.ToLower(topic) && strings.ToLower(question.Difficulty) == strings.ToLower(difficulty) {
+			filteredQuestions = append(filteredQuestions, question)
+		}
+	}
+
+	// Return the requested number of questions, or all if less than count
 	if count <= 0 {
-		return []Question{}
+		return filteredQuestions
 	}
-	if count > len(questions) {
-		count = len(questions)
+	if count > len(filteredQuestions) {
+		count = len(filteredQuestions)
 	}
-	return questions[:count]
+	return filteredQuestions[:count]
 }
 
 // GetHighScores returns all saved high scores
