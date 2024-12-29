@@ -9,6 +9,19 @@ import (
 	"time"
 )
 
+// Global timer value
+var TimerValue = 15 // Default 15 seconds
+
+// SetTimerValue sets the timer value (in seconds)
+func SetTimerValue(seconds int) {
+	TimerValue = seconds
+}
+
+// GetTimerValue returns the current timer value (in seconds)
+func GetTimerValue() int {
+	return TimerValue
+}
+
 // Command constants
 const (
 	CommandStart     = "1"
@@ -123,8 +136,8 @@ func GetHighScores() []Score {
 }
 
 // AddHighScore adds a new high score
-func AddHighScore(score Score) {
-	highScores = append(highScores, score)
+func AddHighScore(Score Score) {
+	highScores = append(highScores, Score)
 }
 
 // StringToInt converts a string to an integer value

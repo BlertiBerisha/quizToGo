@@ -22,6 +22,7 @@ func ShowMenu() {
 	#********* CHOOSE YOUR OPTION BELOW ******
 	# 1. START NEW QUIZ
 	# 2. VIEW HIGH SCORES
+	# 3. SET TIMER
 	#
 	# c. CLEAR VIEW AND SHOW MENU
 	# q. QUIT QUIZ GAME

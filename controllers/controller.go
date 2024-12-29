@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"quizToGo/models"
 	"quizToGo/views/console"
+	"time"
 )
 
 // Run does the running of the console application
@@ -33,10 +34,37 @@ func executeCommand() {
 	parseAndExecuteCommand(command)
 }
 
+// timeoutChan is used to signal when the timer expires
+var timeoutChan chan bool
+
+// answerChan is used to receive the user's answer
+var answerChan chan string
+
+// Initialize channels
+func initializeChannels() {
+	timeoutChan = make(chan bool)
+	answerChan = make(chan string)
+}
+
+func getAnswerWithTimeout() (string, bool) {
+	answerCh := make(chan string, 1)
+
+	go func() {
+		answer := console.AskForInput()
+		answerCh <- answer
+	}()
+
+	select {
+	case answer := <-answerCh:
+		return answer, false
+	case <-time.After(time.Duration(models.TimerValue) * time.Second):
+		return "", true
+	}
+}
+
 func parseAndExecuteCommand(input string) {
 	switch {
 	case input == models.CommandStart:
-		// Start a new quiz game
 		console.Clear()
 
 		// Ask for the player Name
@@ -56,36 +84,40 @@ func parseAndExecuteCommand(input string) {
 		input := console.AskForInput()
 		questionCount := models.StringToInt(input)
 
-		// Debugging print
-		fmt.Println("Topic:", topicChoice, "Difficulty:", difficultyChoice, "Number of Questions:", questionCount)
-
-		var questions []models.Question
+		var selectedQuestions []models.Question
 
 		if topicChoice == "Random" {
-			// Get random questions from all topics, respecting difficulty
-			questions = models.GetRandomQuestionsByDifficulty(difficultyChoice, questionCount)
+			selectedQuestions = models.GetRandomQuestionsByDifficulty(difficultyChoice, questionCount)
 		} else {
-			// Get questions based on the chosen topic and difficulty
-			questions = models.GetQuestionsByTopicAndDifficulty(topicChoice, difficultyChoice, questionCount)
+			selectedQuestions = models.GetQuestionsByTopicAndDifficulty(topicChoice, difficultyChoice, questionCount)
 		}
 
-		// Proceed with the quiz
-		if len(questions) > 0 {
+		if len(selectedQuestions) > 0 {
+			// Show timer information before starting the quiz
+			console.Clear()
+			console.ShowMessage(fmt.Sprintf("You have %d seconds to answer each question.", models.TimerValue))
+			console.ShowMessage("Press Enter to start the quiz...")
+			console.AskForInput()
+
 			currentScore := 0
-			for _, question := range questions {
+
+			for _, question := range selectedQuestions {
 				console.Clear()
 				console.ShowQuestion(question)
 
-				// Get the answer from the user
-				answer := console.AskForInput()
-				answerIndex := models.StringToInt(answer) - 1
+				answer, timedOut := getAnswerWithTimeout()
 
-				// Check if the answer is correct
-				if answerIndex == question.CorrectIndex {
-					currentScore++
-					console.ShowCorrectAnswer()
-				} else {
+				if timedOut {
+					console.ShowMessage("\nTime's up! Question marked as incorrect.")
 					console.ShowWrongAnswer(question.Options[question.CorrectIndex])
+				} else {
+					answerIndex := models.StringToInt(answer) - 1
+					if answerIndex == question.CorrectIndex {
+						currentScore++
+						console.ShowCorrectAnswer()
+					} else {
+						console.ShowWrongAnswer(question.Options[question.CorrectIndex])
+					}
 				}
 
 				// Prompt the user to continue after each question
@@ -94,7 +126,7 @@ func parseAndExecuteCommand(input string) {
 			}
 
 			// Show the final score after the quiz
-			console.ShowFinalScore(currentScore, len(questions))
+			console.ShowFinalScore(currentScore, len(selectedQuestions))
 			console.ShowContinue()
 			console.AskForInput()
 
@@ -102,11 +134,10 @@ func parseAndExecuteCommand(input string) {
 			models.AddHighScore(models.Score{
 				PlayerName:     PlayerName,
 				Score:          currentScore,
-				TotalQuestions: len(questions),
+				TotalQuestions: len(selectedQuestions),
 			})
 
 		} else {
-			// Handle case where no questions are available
 			console.ShowMessage("No questions available.")
 		}
 
@@ -126,7 +157,21 @@ func parseAndExecuteCommand(input string) {
 
 	case input == models.CommandTimer:
 		// Set default Timer
+		// Change timer value
 		console.Clear()
+		console.ShowMessage("Current timer value (seconds): " + fmt.Sprintf("%d", models.TimerValue))
+		console.ShowMessage("Enter new timer value (in seconds):")
+		newTimerValue := console.AskForInput()
+		newTimerInt := models.StringToInt(newTimerValue)
+
+		// Update the timer value
+		models.SetTimerValue(newTimerInt)
+
+		console.ShowMessage("Timer value updated successfully!")
+		console.ShowContinue()
+		console.AskForInput()
+		console.Clear()
+		console.ShowMenu()
 
 	case input == models.CommandClear:
 		// Clear the view and return to the menu
